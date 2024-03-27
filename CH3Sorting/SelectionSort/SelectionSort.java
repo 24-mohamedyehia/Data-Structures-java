@@ -46,7 +46,21 @@ public class SelectionSort {
       }
       swap(out, min);
     }
+  }
 
+  // selection sort descending method
+  public void SelectionSortDescending() {
+    int max, out, in;
+
+    for(out = 0; out < nElems -1; out++){
+      max = out;
+      for(in = out+1; in < nElems; in++){
+        if (arr[in] > arr[max]) {
+          max = in;
+        }
+      }
+      swap(out, max);
+    }
   }
 
 }
