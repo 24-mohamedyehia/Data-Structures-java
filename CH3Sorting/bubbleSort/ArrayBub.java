@@ -41,37 +41,32 @@ public class ArrayBub {
   // bubble sort descinding method
   public void bubbleSortDescinding() {
 
-    int out, in, count_compare=0, count_swap=0;
+    int out, in;
 
     for(out = nElems -1; out > 0; out--){
       for(in = 0; in < out; in++){
-        count_compare++;
+        
         if (arr[in] < arr[in + 1]) {
           swap(in, in + 1);
-          count_swap++;
+          
         }
       }
     }
-    // System.out.println("Number of comparisons: " + count_compare);
-    // System.out.println("Number of swaps: " + count_swap);
   }
 
   // bubble sort method
   public void bubbleSortascending() {
 
-    int out, in, count_compare=0, count_swap=0;
+    int out, in;
 
     for (out = nElems - 1; out > 0; out--) {
       for (in = 0; in < out; in++) {
-        count_compare++;
+        
         if (arr[in] > arr[in + 1]) {
           swap(in, in + 1);
-          count_swap++;
+          
         }
       }
     }
-
-    // System.out.println("Number of comparisons: " + count_compare);
-    // System.out.println("Number of swaps: " + count_swap);
   }
 }
