@@ -1,4 +1,4 @@
-package CH2UnorderdArray.ArrayEx2Withclass;
+package CH2UnorderdArray;
 // import Chapter2Array.ArrayEx2Withclass.HighArray;
 
 public class HighArrayApp {

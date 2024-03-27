@@ -1,4 +1,4 @@
-package CH2UnorderdArray.ArrayEx2Withclass;
+package CH2UnorderdArray;
 
 public class HighArray {
 

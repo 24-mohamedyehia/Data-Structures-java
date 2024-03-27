@@ -1,3 +1,4 @@
+package CH3Sorting.bubbleSort;
 /**
  * Bubble sort implementation.
  * Contains methods to insert values into an array, display the array, 

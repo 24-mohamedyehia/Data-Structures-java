@@ -1,3 +1,4 @@
+package CH3Sorting.bubbleSort;
 
 /**
  * Creates an ArrayBub object with the given initial capacity, inserts elements, 

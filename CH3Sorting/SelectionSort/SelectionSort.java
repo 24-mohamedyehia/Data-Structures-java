@@ -1,4 +1,4 @@
-package EX2_SelectionSort;
+package CH3Sorting.SelectionSort;
 
 public class SelectionSort {
 
