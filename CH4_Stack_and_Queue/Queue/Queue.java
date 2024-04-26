@@ -2,51 +2,58 @@ package CH4_Stack_and_Queue.Queue;
 
 public class Queue {
   private int queArr[];
-  private int maxSize;
   private int front;
   private int rear;
-  private int nItems;
+  private int nElemnt = 0;
 
   public Queue(int size) {
-    maxSize = size;
-    queArr = new int[maxSize];
-    front = 0;
+    queArr = new int[size];
+    front = -1;
     rear = -1;
-    nItems = 0;
   }
 
   public int size() {
-    return maxSize;
-  }
-
-  public void enqueue(int value) {
-    if (isFull()) {
-      System.out.println("Queue is full");
-      return;
-    }
-    
-    rear = (rear + 1) % maxSize; // Move rear pointer circularly
-    queArr[rear] = value;
-    nItems++;
-  }
-
-  public boolean isEmpty() {
-    return (nItems == 0);
+    return nElemnt;
   }
 
   public boolean isFull() {
-    return (nItems == maxSize);
+    return (front == 0 && rear == queArr.length -1);
   }
+
+  public boolean isEmpty() {
+    return (front == -1);
+  }
+
+
+  public void enqueue(int value) {
+    if (isFull()) System.out.println("Queue is full");
+    
+    else {
+      if (front == -1) {
+        front = 0;
+      }
+      ++nElemnt;
+      ++rear;
+      queArr[rear] = value;
+  }
+  }
+
 
   public int dequeue() {
     if (isEmpty()) {
       System.out.println("Queue is empty");
       return -1;
-    }
-
+    } 
     int temp = queArr[front];
-    front = (front + 1) % maxSize; // Move front pointer circularly
-    nItems--;
+    if (front == rear) {
+      front = -1;
+      rear = -1;
+      nElemnt = 0;
+    }
+    else {
+      ++front;
+      --nElemnt;
+    }
     return temp;
   }
 
@@ -58,6 +65,7 @@ public class Queue {
     return queArr[front];
   }
 
+
   public int peekRear() {
     if (isEmpty()) {
       System.out.println("Queue is empty");
@@ -65,4 +73,17 @@ public class Queue {
     }
     return queArr[rear];
   }
+
+  public void display(){
+    if (isEmpty()) {
+      System.out.println("Queue is Empty");
+    }
+    else {
+      for(int i = front; i <= rear; i++){
+        System.out.print(queArr[i] + " ");
+      }
+      System.out.println();
+    }
+  }
+
 }
