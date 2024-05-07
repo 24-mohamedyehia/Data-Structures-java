@@ -1,6 +1,7 @@
 package CH4_Stack_and_Queue.Queue;
 
 public class Queue {
+  
   private int queArr[];
   private int front;
   private int rear;
